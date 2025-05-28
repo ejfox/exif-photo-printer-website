@@ -234,6 +234,49 @@
             margin: 8px 0;
         }
         
+        .security-notice {
+            margin-top: 40px;
+            padding: 30px;
+            background: #fff3cd;
+            border: 1px solid #ffeaa7;
+            border-radius: 12px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .security-notice h4 {
+            color: #856404;
+            margin-bottom: 15px;
+        }
+        
+        .security-notice h5 {
+            color: #856404;
+            margin: 20px 0 10px 0;
+            font-size: 1rem;
+        }
+        
+        .security-notice p {
+            color: #856404;
+            margin-bottom: 15px;
+        }
+        
+        .workaround-steps ol {
+            color: #856404;
+            padding-left: 20px;
+            margin: 15px 0;
+        }
+        
+        .workaround-steps li {
+            margin: 8px 0;
+            line-height: 1.6;
+        }
+        
+        .workaround-steps small {
+            color: #6c5f04;
+            font-style: italic;
+        }
+        
         /* Footer */
         .footer {
             padding: 60px 0;
@@ -378,6 +421,24 @@
                     <li>• 200 MB free disk space</li>
                     <li>• Works on Intel and Apple Silicon Macs</li>
                 </ul>
+            </div>
+            
+            <div class="security-notice">
+                <h4>⚠️ macOS Security Notice</h4>
+                <p>macOS may show a warning that the app "cannot be verified." This is normal for indie apps that aren't notarized through Apple's paid developer program.</p>
+                
+                <div class="workaround-steps">
+                    <h5>To install safely:</h5>
+                    <ol>
+                        <li><strong>Download</strong> the DMG file</li>
+                        <li><strong>Right-click</strong> on "EXIF Photo Printer.app"</li>
+                        <li><strong>Select "Open"</strong> from the menu</li>
+                        <li><strong>Click "Open"</strong> in the security dialog</li>
+                    </ol>
+                    <p><small>Alternative: Go to System Preferences → Security & Privacy → General, then click "Open Anyway"</small></p>
+                </div>
+                
+                <p><strong>Why this happens:</strong> Apple charges $99/year for code signing certificates. As an indie developer, I've chosen to keep the app free rather than pass that cost to users.</p>
             </div>
         </div>
     </section>

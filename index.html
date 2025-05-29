@@ -11,9 +11,6 @@
     <meta property="og:description" content="Professional photo printing with embedded camera data">
     <meta property="og:type" content="website">
     
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     
     <style>
         * {
@@ -27,16 +24,18 @@
         }
         
         body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background: #fafafa;
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            font-weight: 300;
+            line-height: 1.5;
+            color: #000;
+            background: #fff;
+            letter-spacing: 0.01em;
         }
         
         .container {
-            max-width: 1200px;
+            max-width: 960px;
             margin: 0 auto;
-            padding: 0 40px;
+            padding: 0 60px;
         }
         
         /* Hero Section */
@@ -45,75 +44,53 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            text-align: center;
-            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            text-align: left;
+            background: #fff;
             position: relative;
-            overflow: hidden;
-        }
-        
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="20" cy="20" r="0.5" fill="%23000" opacity="0.03"/><circle cx="80" cy="60" r="0.3" fill="%23000" opacity="0.02"/><circle cx="40" cy="80" r="0.4" fill="%23000" opacity="0.025"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
-            opacity: 0.4;
-            pointer-events: none;
         }
         
         .hero-content {
-            position: relative;
-            z-index: 1;
-        }
-        
-        .app-icon {
-            width: 120px;
-            height: 120px;
-            margin: 0 auto 40px;
-            border-radius: 22px;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
-            background: url('icon.png') center/cover;
+            width: 100%;
+            max-width: 500px;
         }
         
         .hero h1 {
-            font-size: 3.5rem;
-            font-weight: 300;
-            margin-bottom: 20px;
-            color: #2c3e50;
-            letter-spacing: -0.02em;
+            font-size: 4rem;
+            font-weight: 200;
+            margin-bottom: 30px;
+            color: #000;
+            letter-spacing: -0.03em;
+            line-height: 0.9;
         }
         
         .hero .tagline {
-            font-size: 1.4rem;
-            color: #6c757d;
-            margin-bottom: 50px;
+            font-size: 1.1rem;
+            color: #000;
+            margin-bottom: 60px;
             font-weight: 300;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
+            line-height: 1.4;
+            max-width: 400px;
         }
         
         .cta-button {
             display: inline-flex;
             align-items: center;
-            gap: 12px;
-            background: #2c3e50;
-            color: white;
-            padding: 18px 36px;
+            gap: 8px;
+            background: #000;
+            color: #fff;
+            padding: 12px 24px;
             text-decoration: none;
-            border-radius: 50px;
-            font-weight: 500;
-            font-size: 1.1rem;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 20px rgba(44, 62, 80, 0.3);
+            border: 1px solid #000;
+            font-weight: 300;
+            font-size: 0.9rem;
+            transition: all 0.2s ease;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
         }
         
         .cta-button:hover {
-            background: #34495e;
-            transform: translateY(-2px);
-            box-shadow: 0 6px 25px rgba(44, 62, 80, 0.4);
+            background: #fff;
+            color: #000;
         }
         
         .download-icon {
@@ -123,68 +100,108 @@
         
         /* Features Section */
         .features {
-            padding: 120px 0;
-            background: white;
+            padding: 100px 0;
+            background: #f8f8f8;
+            border-top: 1px solid #eee;
         }
         
         .section-header {
-            text-align: center;
-            margin-bottom: 80px;
+            text-align: left;
+            margin-bottom: 60px;
         }
         
         .section-header h2 {
-            font-size: 2.5rem;
-            font-weight: 300;
-            color: #2c3e50;
+            font-size: 2rem;
+            font-weight: 200;
+            color: #000;
             margin-bottom: 20px;
+            letter-spacing: -0.02em;
         }
         
         .section-header p {
-            font-size: 1.2rem;
-            color: #6c757d;
-            max-width: 600px;
-            margin: 0 auto;
+            font-size: 1rem;
+            color: #666;
+            max-width: 500px;
+            font-weight: 300;
         }
         
         .features-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 60px;
-            margin-top: 60px;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-top: 40px;
         }
         
         .feature {
-            text-align: center;
-        }
-        
-        .feature-icon {
-            width: 60px;
-            height: 60px;
-            margin: 0 auto 30px;
-            background: #f8f9fa;
-            border-radius: 16px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 24px;
+            text-align: left;
         }
         
         .feature h3 {
-            font-size: 1.4rem;
-            font-weight: 500;
-            margin-bottom: 15px;
-            color: #2c3e50;
+            font-size: 1rem;
+            font-weight: 400;
+            margin-bottom: 12px;
+            color: #000;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
         }
         
         .feature p {
-            color: #6c757d;
-            line-height: 1.7;
+            color: #666;
+            line-height: 1.5;
+            font-size: 0.9rem;
+            font-weight: 300;
+        }
+        
+        /* Lifestyle Section */
+        .lifestyle {
+            padding: 100px 0;
+            background: #fff;
+            border-top: 1px solid #eee;
+        }
+        
+        .lifestyle-content {
+            margin-top: 60px;
+        }
+        
+        .scenario {
+            margin-bottom: 50px;
+            max-width: 600px;
+        }
+        
+        .scenario:last-child {
+            margin-bottom: 0;
+        }
+        
+        .scenario h3 {
+            font-size: 1rem;
+            font-weight: 400;
+            color: #000;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        
+        .scenario p {
+            color: #000;
+            line-height: 1.6;
+            font-size: 1rem;
+            font-weight: 300;
+            margin-bottom: 12px;
+            font-style: italic;
+        }
+        
+        .scenario .detail {
+            color: #666;
+            font-style: normal;
+            font-size: 0.9rem;
+            margin-bottom: 0;
         }
         
         /* Screenshots Section */
         .screenshots {
-            padding: 120px 0;
-            background: #f8f9fa;
+            padding: 100px 0;
+            background: #fff;
+            border-top: 1px solid #eee;
         }
         
         .screenshot-container {
@@ -194,47 +211,52 @@
         
         .screenshot-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 40px;
-            margin-top: 60px;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
         }
         
         .screenshot-item {
-            text-align: center;
+            text-align: left;
         }
         
         .screenshot-item h4 {
-            font-size: 1.2rem;
-            font-weight: 500;
-            color: #2c3e50;
-            margin-bottom: 15px;
+            font-size: 0.8rem;
+            font-weight: 400;
+            color: #000;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
         }
         
         .screenshot-item p {
-            color: #6c757d;
-            font-size: 0.9rem;
-            line-height: 1.6;
-            margin-bottom: 20px;
+            color: #666;
+            font-size: 0.85rem;
+            line-height: 1.4;
+            margin-bottom: 15px;
+            font-weight: 300;
         }
         
         .screenshot {
             max-width: 100%;
             height: auto;
-            border-radius: 8px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            border: 1px solid #e9ecef;
+            border: 1px solid #ddd;
+            box-shadow: none;
         }
         
         /* Download Section */
         .download {
-            padding: 120px 0;
-            background: white;
-            text-align: center;
+            padding: 100px 0;
+            background: #f8f8f8;
+            border-top: 1px solid #eee;
+            text-align: left;
         }
         
         .download-info {
-            margin-top: 40px;
-            color: #6c757d;
+            margin-top: 30px;
+            color: #666;
+            font-size: 0.85rem;
+            font-weight: 300;
         }
         
         .system-requirements {
@@ -304,37 +326,58 @@
         
         /* Footer */
         .footer {
-            padding: 60px 0;
-            background: #2c3e50;
-            color: white;
-            text-align: center;
+            padding: 40px 0;
+            background: #000;
+            color: #fff;
+            text-align: left;
+            border-top: 1px solid #333;
         }
         
         .footer p {
-            color: #bdc3c7;
+            color: #999;
+            font-size: 0.8rem;
+            font-weight: 300;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
         }
         
         /* Responsive */
         @media (max-width: 768px) {
             .container {
-                padding: 0 20px;
+                padding: 0 30px;
             }
             
             .hero h1 {
-                font-size: 2.5rem;
+                font-size: 2.8rem;
             }
             
             .hero .tagline {
-                font-size: 1.2rem;
+                font-size: 1rem;
             }
             
             .features-grid {
                 grid-template-columns: 1fr;
-                gap: 40px;
+                gap: 30px;
             }
             
             .section-header h2 {
-                font-size: 2rem;
+                font-size: 1.8rem;
+            }
+            
+            .hero {
+                text-align: center;
+            }
+            
+            .section-header {
+                text-align: center;
+            }
+            
+            .download {
+                text-align: center;
+            }
+            
+            .footer {
+                text-align: center;
             }
         }
     </style>
@@ -344,14 +387,10 @@
     <section class="hero">
         <div class="container">
             <div class="hero-content">
-                <div class="app-icon"></div>
                 <h1>EXIF Photo Printer</h1>
-                <p class="tagline">Utilitarian photo printing with embedded EXIF data. Minimal interface, maximum function. Professional results for serious photographers.</p>
-                <a href="https://github.com/ejfox/exif-photo-printer-website/releases" class="cta-button">
-                    <svg class="download-icon" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/>
-                    </svg>
-                    Download for Mac
+                <p class="tagline">Prints photos. Preserves data. Nothing else.</p>
+                <a href="https://github.com/ejfox/exif-printer-simple/releases" class="cta-button">
+                    Download
                 </a>
             </div>
         </div>
@@ -361,45 +400,69 @@
     <section class="features">
         <div class="container">
             <div class="section-header">
-                <h2>Professional Photo Printing, Simplified</h2>
-                <p>Minimal, utilitarian design meets professional output. Clean interface with dark mode support for distraction-free workflow.</p>
+                <h2>What It Does</h2>
+                <p>No subscriptions. No cloud. No tracking. Just a tool that works.</p>
             </div>
             
             <div class="features-grid">
                 <div class="feature">
-                    <div class="feature-icon">📸</div>
-                    <h3>Complete EXIF Data</h3>
-                    <p>Camera model, lens, exposure settings, ISO, date/time, and more. All the technical details photographers need for analysis and learning.</p>
+                    <h3>Drag. Print.</h3>
+                    <p>Photos go in. Prints come out. Camera data preserved on every image.</p>
                 </div>
                 
                 <div class="feature">
-                    <div class="feature-icon">🎨</div>
-                    <h3>Multiple Print Sizes</h3>
-                    <p>4x6", 5x7", 8x10", 8x12", 11x14", and 5x5" square formats. All optimized for professional print services like Walgreens or Costco.</p>
+                    <h3>Standard Sizes</h3>
+                    <p>4×6 through 11×14. Square formats. Works with any printer.</p>
                 </div>
                 
                 <div class="feature">
-                    <div class="feature-icon">⚡</div>
-                    <h3>Drag & Drop Workflow</h3>
-                    <p>Simply drag photos into the app or import entire folders. Global settings apply to all images for consistent, professional results.</p>
+                    <h3>Batch Export</h3>
+                    <p>Process dozens of images. One folder. One click.</p>
                 </div>
                 
                 <div class="feature">
-                    <div class="feature-icon">🎯</div>
-                    <h3>Smart Framing Options</h3>
-                    <p>Choose between "Preserve Aspect" to show the entire image or "Maximize Image" to fill the print area. Perfect control over composition.</p>
+                    <h3>Technical Data</h3>
+                    <p>Lens, aperture, shutter, ISO. The numbers that matter.</p>
                 </div>
                 
                 <div class="feature">
-                    <div class="feature-icon">✨</div>
-                    <h3>Minimal Interface</h3>
-                    <p>Utilitarian design with monospace typography. Dark mode support respects your system preferences. Zero distractions, maximum productivity.</p>
+                    <h3>Offline</h3>
+                    <p>No internet required. Your images stay on your machine.</p>
                 </div>
                 
                 <div class="feature">
-                    <div class="feature-icon">🖼️</div>
-                    <h3>Optional Black Borders</h3>
-                    <p>Add subtle black borders around your images for a classic gallery look, all within the white EXIF data border.</p>
+                    <h3>Free</h3>
+                    <p>Download once. Use forever. No payments, no subscriptions.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lifestyle Section -->
+    <section class="lifestyle">
+        <div class="container">
+            <div class="section-header">
+                <h2>The Data Stays</h2>
+                <p>Physical prints with embedded technical information. Knowledge preserved.</p>
+            </div>
+            
+            <div class="lifestyle-content">
+                <div class="scenario">
+                    <h3>The Discovery</h3>
+                    <p>"You shot this at f/16? In daylight?"</p>
+                    <p class="detail">Every print carries its technical DNA. Settings visible. Decisions documented.</p>
+                </div>
+                
+                <div class="scenario">
+                    <h3>Pattern Recognition</h3>
+                    <p>"You're gravitating toward that 23mm lately."</p>
+                    <p class="detail">Focal length preferences. ISO habits. Your photographic fingerprint made visible.</p>
+                </div>
+                
+                <div class="scenario">
+                    <h3>Knowledge Transfer</h3>
+                    <p>"1/250th at ISO 3200. Got it."</p>
+                    <p class="detail">Technical settings become lessons. Prints become teaching tools.</p>
                 </div>
             </div>
         </div>
@@ -409,26 +472,21 @@
     <section class="screenshots" id="screenshots">
         <div class="container">
             <div class="section-header">
-                <h2>See It In Action</h2>
-                <p>Clean, professional interface designed for photographers by photographers.</p>
+                <h2>Output</h2>
+                <p>Camera data embedded in clean typography. Nothing unnecessary.</p>
             </div>
             
             <div class="screenshot-container">
                 <div class="screenshot-grid">
                     <div class="screenshot-item">
-                        <h4>Clean, Minimal Interface</h4>
-                        <p>Utilitarian design with dark mode support. Zero distractions, maximum productivity.</p>
-                        <!-- Add app screenshot here when available -->
+                        <h4>Landscape</h4>
+                        <img src="screenshot-1.png" alt="EXIF Print Output - Landscape" class="screenshot">
+                        <p>Technical data. Clean layout. Nothing else.</p>
                     </div>
                     <div class="screenshot-item">
-                        <h4>Professional Print Output</h4>
-                        <img src="screenshot-1.png" alt="Sample EXIF Print Output - Landscape" class="screenshot">
-                        <p>Complete EXIF metadata beautifully laid out around your photos</p>
-                    </div>
-                    <div class="screenshot-item">
-                        <h4>Perfect for Any Subject</h4>
-                        <img src="screenshot-2.png" alt="Sample EXIF Print Output - Portrait" class="screenshot">
-                        <p>Camera settings, lens info, date/time, and filename - all professionally formatted</p>
+                        <h4>Portrait</h4>
+                        <img src="screenshot-2.png" alt="EXIF Print Output - Portrait" class="screenshot">
+                        <p>Camera settings preserved. Image centered. Data visible.</p>
                     </div>
                 </div>
             </div>
@@ -439,19 +497,16 @@
     <section class="download" id="download">
         <div class="container">
             <div class="section-header">
-                <h2>Ready to Print?</h2>
-                <p>Download EXIF Photo Printer and start creating professional prints with embedded camera data.</p>
+                <h2>Download</h2>
+                <p>Free. No account required. No tracking.</p>
             </div>
             
-            <a href="https://github.com/ejfox/exif-photo-printer-website/releases" class="cta-button" style="font-size: 1.2rem; padding: 20px 40px;">
-                <svg class="download-icon" style="width: 24px; height: 24px;" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/>
-                </svg>
-                Download for macOS
+            <a href="https://github.com/ejfox/exif-printer-simple/releases" class="cta-button" style="font-size: 0.9rem; padding: 12px 24px;">
+                macOS
             </a>
             
             <div class="download-info">
-                <p><strong>Version 1.0.0</strong> • 120 MB • Universal Binary (Intel & Apple Silicon)</p>
+                <p>Universal binary. Works offline. Always free.</p>
             </div>
             
             <div class="system-requirements">
@@ -486,7 +541,7 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p>Created with ❤️ for photographers who care about the details.</p>
+            <p>A tool for photographers.</p>
         </div>
     </footer>
 
